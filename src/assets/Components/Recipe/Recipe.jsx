@@ -2,7 +2,7 @@
 const Recipe = () => {
     return (
         <div>
-            <h1>Recipe</h1>
+            {/* <h1>Recipe</h1> */}
         </div>
     );
 };

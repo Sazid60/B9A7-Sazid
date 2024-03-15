@@ -17,10 +17,12 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
-      <Banner></Banner>
-      <Recipes></Recipes>
-      <Cart></Cart>
+      <div className="container mx-auto">
+        <Navbar></Navbar>
+        <Banner></Banner>
+        <Recipes></Recipes>
+        <Cart></Cart>
+      </div>
     </>
   )
 }
