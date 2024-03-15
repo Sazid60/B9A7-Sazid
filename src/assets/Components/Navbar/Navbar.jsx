@@ -3,8 +3,8 @@ import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
     return (
-        <div className="mt-6 md:flex lg:flex justify-between items-center space-y-3 md:space-y-0 lg:space-y-0">
-            <h1 className="text-4xl font-bold text-center md:text-left lg:text-left">Recipe Calories</h1>
+        <div className="mt-6 lg:flex justify-between items-center space-y-3 lg:space-y-0 mx-4">
+            <h1 className="text-4xl font-bold text-center lg:text-left">Recipe Calories</h1>
             <div className="flex font-semibold justify-center lg:justify-start text-xl gap-6">
                 <p>Home</p>
                 <p>Recipes</p>
