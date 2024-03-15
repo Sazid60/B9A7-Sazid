@@ -1,13 +1,20 @@
 import Recipe from "../Recipe/Recipe";
+import PropTypes from 'prop-types';
 
 
-const Recipes = () => {
+const Recipes = ({items}) => {
     return (
-        <div>
-            <h1>Recipes</h1>
-            <Recipe></Recipe>
-        </div>
+        <>
+        {
+            items.map(item=><Recipe key={item.recipe_id} item={item}></Recipe>)
+        }
+            
+        </>
+
+
     );
 };
-
+Recipes.propTypes = {
+    items: PropTypes.array,
+}
 export default Recipes;
