@@ -68,7 +68,7 @@ function App() {
           <div className="flex justify-center items-center mt-6 text-center">
             <p className="max-w-[800px] mb-12 lg:text-xl">Explore our Recipe section, a culinary treasure trove where flavors mingle and inspiration thrives. Discover a world of gastronomic delight and unleash your inner chef with our diverse array of mouthwatering recipes.</p>
           </div>
-          <div className="lg:flex gap-6">
+          <div className="lg:flex gap-6 space-y-3 lg:space-y-0 mb-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:w-[60%] p-5 border-2 rounded-xl">
               <Recipes items={items} handleCookClick={handleCookClick}></Recipes>
             </div>
