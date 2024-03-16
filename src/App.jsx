@@ -10,16 +10,31 @@ function App() {
   const [items, setItems] = useState([])
 
   const [clickedItems, setClickedItems] = useState([])
-  const [clickCount,setClickCount] = useState(0)
+  const [clickCount, setClickCount] = useState(0)
+
+  const [preparingItem, setPreparingItem] = useState([])
+  const[preparingCount, setPreparingCount] = useState(0)
 
 
   const handleCookClick = (item) => {
-    setClickCount(clickCount+1)
-    const newSet = [...clickedItems, item];
-    setClickedItems(newSet);
-    
+
+    const alreadyExist = clickedItems.find(topCartClickedItem => topCartClickedItem.recipe_id === item.recipe_id)
+    if (!alreadyExist) {
+      setClickCount(clickCount + 1)
+      const newSet = [...clickedItems, item];
+      setClickedItems(newSet);
+    }
+
   }
-  // console.log(clickedItems)
+  const handlePreparingButton = (clickedItem) => {
+    const newClicked = [...preparingItem, clickedItem]
+    setPreparingItem(newClicked)
+    setClickCount(clickCount - 1)
+    setPreparingCount(preparingCount + 1)
+    const newCart = clickedItems.filter(item => clickedItem.recipe_id !== item.recipe_id);
+    setClickedItems(newCart)
+  }
+  // console.log(preparingCount)
 
   useEffect(() => {
     fetch('items.json')
@@ -56,12 +71,12 @@ function App() {
                   </tr>
                 </thead>
                 {
-                  clickedItems.map((clickedItem,index) => <CartTop index={index+1} key={clickedItem.recipe_id} clickedItem={clickedItem}></CartTop>)
+                  clickedItems.map((clickedItem, index) => <CartTop index={index + 1} key={clickedItem.recipe_id} clickedItem={clickedItem} handlePreparingButton={handlePreparingButton}></CartTop>)
                 }
 
               </table>
               <div className="mt-12">
-                <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Currently Cooking : {0}</h1> <hr className="mb-8" />
+                <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Currently Cooking : {preparingCount}</h1> <hr className="mb-8" />
                 <table className="table-auto w-full text-center ">
                   <thead>
                     <tr>
@@ -73,7 +88,10 @@ function App() {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <CartBottom></CartBottom>
+                    {
+                      preparingItem.map((item,index)=><CartBottom key={index} item={item} index={index+1}></CartBottom>)
+                    }
+                    {/* <CartBottom preparingItem={preparingItem}></CartBottom> */}
                   </tbody>
                 </table> <hr className="mt-6" />
                 <div className="mt-7 text-center lg:text-right lg:jpr-14">
