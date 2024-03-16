@@ -19,7 +19,8 @@ function App() {
   const handleCookClick = (item) => {
 
     const alreadyExist = clickedItems.find(topCartClickedItem => topCartClickedItem.recipe_id === item.recipe_id)
-    if (!alreadyExist) {
+    const alreadyPreparing = preparingItem.find(itemPreparing =>itemPreparing.recipe_id === item.recipe_id )
+    if (!alreadyExist && !alreadyPreparing ) {
       setClickCount(clickCount + 1)
       const newSet = [...clickedItems, item];
       setClickedItems(newSet);
