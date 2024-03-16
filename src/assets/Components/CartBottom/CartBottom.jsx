@@ -6,7 +6,7 @@ const CartBottom = ({item,index}) => {
     return (
         <>
             <tr className='rounded-xl'>
-                <td className="text-xs lg:text-lg py-2 lg:px-2 rounded-l-xl">{index}</td>
+                <td className="text-xs lg:text-lg py-2 px-2 rounded-l-xl">{index}</td>
                 <td className="text-xs lg:text-lg py-2"> {recipe_name}</td>
                 <td className="text-xs lg:text-lg py-2">{preparing_time} Minutes</td>
                 <td className="text-xs lg:text-lg py-2 rounded-r-xl">{calories} Calories </td>

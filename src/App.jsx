@@ -73,12 +73,12 @@ function App() {
               <Recipes items={items} handleCookClick={handleCookClick}></Recipes>
             </div>
             <div className="lg:w-[60%] flex flex-col item-center border-2 p-6 rounded-xl">
-              <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Want to Cook : {clickCount}</h1>
+              <h1 className="font-bold text-lg lg:text-xl text-center lg:mb-6">Want to Cook : {clickCount}</h1>
               <hr className="mb-8" />
               <table className="table-auto">
                 <thead className="border-b-2">
                   <tr className="">
-                    <th className=" px-2 text-xs lg:text-lg"></th>
+                    <th className=" px-2 text-xs lg:text-sm"></th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Name</th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Time</th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Calories</th>
@@ -91,7 +91,7 @@ function App() {
 
               </table>
               <div className="mt-12">
-                <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Currently Cooking : {preparingCount}</h1> <hr className="mb-8" />
+                <h1 className="font-bold text-lg lg:text-xl text-center lg:mb-6">Currently Cooking : {preparingCount}</h1> <hr className="mb-8" />
                 <table className="table-auto w-full text-center ">
                   <thead className="">
                     <tr>
