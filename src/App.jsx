@@ -15,12 +15,15 @@ function App() {
   const [preparingItem, setPreparingItem] = useState([])
   const[preparingCount, setPreparingCount] = useState(0)
 
+  const [time,setTime] = useState(0)
+  const [calories,setCalories] =useState(0)
+
 
   const handleCookClick = (item) => {
 
     const alreadyExist = clickedItems.find(topCartClickedItem => topCartClickedItem.recipe_id === item.recipe_id)
-    const alreadyPreparing = preparingItem.find(itemPreparing =>itemPreparing.recipe_id === item.recipe_id )
-    if (!alreadyExist && !alreadyPreparing ) {
+    // const alreadyPreparing = preparingItem.find(itemPreparing =>itemPreparing.recipe_id === item.recipe_id )
+    if (!alreadyExist) {
       setClickCount(clickCount + 1)
       const newSet = [...clickedItems, item];
       setClickedItems(newSet);
@@ -34,7 +37,10 @@ function App() {
     setPreparingCount(preparingCount + 1)
     const newCart = clickedItems.filter(item => clickedItem.recipe_id !== item.recipe_id);
     setClickedItems(newCart)
+    setTime(time + JSON.parse(clickedItem.preparing_time))
+    setCalories(calories +  JSON.parse(clickedItem.calories))
   }
+  console.log(time)
   // console.log(preparingCount)
 
   useEffect(() => {
@@ -95,10 +101,10 @@ function App() {
                     {/* <CartBottom preparingItem={preparingItem}></CartBottom> */}
                   </tbody>
                 </table> <hr className="mt-6" />
-                <div className="mt-7 text-center lg:text-right lg:jpr-14">
+                <div className="mt-7 text-center lg:text-right lg:pr-14">
                   <br />
-                  <h1 className="lg:text-xl font-bold"> Total Time: {45} Minutes </h1> <br />
-                  <h1 className="lg:text-xl font-bold"> Total Calories: {240} Calories</h1>
+                  <h1 className="lg:text-xl font-bold"> Total Time: {time} Minutes </h1> <br />
+                  <h1 className="lg:text-xl font-bold"> Total Calories: {calories} Calories</h1>
                 </div>
               </div>
             </div>
