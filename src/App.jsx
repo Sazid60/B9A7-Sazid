@@ -81,8 +81,8 @@ function App() {
                     <th className=" px-2 text-xs lg:text-lg"></th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Name</th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Time</th>
-                    <th className="px-4 py-2 text-xs lg:text-lg">Calories</th>
-                    <th className="px-4 py-2 text-xs lg:text-lg"></th>
+                    <th className="px-2 py-2 text-xs lg:text-lg">Calories</th>
+                    <th className="px-2 py-2 text-xs lg:text-lg"></th>
                   </tr> 
                 </thead> 
                 {
@@ -96,10 +96,10 @@ function App() {
                   <thead className="">
                     <tr>
                       <th className="text-xs lg:text-lg"></th>
-                      <th className="px-4 py-2 text-xs lg:text-lg">Name</th>
-                      <th className="px-4 py-2 text-xs lg:text-lg">Time</th>
-                      <th className="px-4 py-2 text-xs lg:text-lg">Calories</th>
-                      <th className="px-4 py-2 text-xs lg:text-lg"></th>
+                      <th className="px-2 py-2 text-xs lg:text-lg">Name</th>
+                      <th className="px-2 py-2 text-xs lg:text-lg">Time</th>
+                      <th className="px-2 py-2 text-xs lg:text-lg">Calories</th>
+                      <th className="px-2 py-2 text-xs lg:text-lg"></th>
                     </tr>
                   </thead>
                   <tbody className="text-center bg-[#28282808] rounded-xl">
@@ -107,7 +107,7 @@ function App() {
                       preparingItem.map((item,index)=><CartBottom key={index} item={item} index={index+1}></CartBottom>)
                     }
                   </tbody>
-                </table> <hr className="mt-6" />
+                </table> <hr className="mt-2 lg:mt-6" />
                 <div className="mt-7 text-center lg:text-right lg:pr-14">
                   <br />
                   <h1 className="lg:text-lg font-bold"> Total Time: {time} Minutes </h1> <br />
