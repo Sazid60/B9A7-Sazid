@@ -12,7 +12,7 @@
       "recipe_image": "https://i.ibb.co/fpztWX0/spaghetti-bolognese.jpg",
       "recipe_id": 2,
       "recipe_name": "Spaghetti Bolognese",
-      "short_description": "Classic Italian pasta dish with rich meat sauce and Parmesan cheese.",
+      "short_description": "Classic Italian pasta dish with rich meat sauce and cheese.",
       "ingredients": ["400 g spaghetti", "300 g ground beef", "1 onion", "2 cloves garlic", "400 g canned tomatoes"],
       "preparing_time": "45",
       "calories": "400"
@@ -21,7 +21,7 @@
       "recipe_image": "https://i.ibb.co/HrTtfkP/vegetable-stir-fry.jpg",
       "recipe_id": 3,
       "recipe_name": "Vegetable Stir Fry",
-      "short_description": "A colorful and nutritious stir-fried vegetable dish seasoned with soy sauce.",
+      "short_description": "A colorful and nutritious stir-fried vegetable dish seasoned.",
       "ingredients": ["300 g mixed vegetables", "100 g tofu", "2 tbsp soy sauce", "1 tbsp sesame oil"],
       "preparing_time": "20",
       "calories": "250"
@@ -39,7 +39,7 @@
       "recipe_image": "https://i.ibb.co/LRswnzP/caesar-salad.jpg",
       "recipe_id": 5,
       "recipe_name": "Caesar Salad",
-      "short_description": "Classic Caesar salad with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+      "short_description": "Classic Caesar salad with romaine lettuce, croutons, Parmesan, and Caesar dressing.",
       "ingredients": ["1 head romaine lettuce", "100 g croutons", "50 g Parmesan cheese", "4 tbsp Caesar dressing ","2 fillets Anchovies", "1 tbsp Lemon Juice"], 
       
       "preparing_time": "15",
