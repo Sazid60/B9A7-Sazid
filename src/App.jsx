@@ -5,6 +5,8 @@ import Navbar from "./assets/Components/Navbar/Navbar"
 import Recipes from "./assets/Components/Recipes/Recipes"
 import { useEffect } from "react"
 import CartBottom from "./assets/Components/CartBottom/CartBottom"
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [items, setItems] = useState([])
@@ -22,11 +24,18 @@ function App() {
   const handleCookClick = (item) => {
 
     const alreadyExist = clickedItems.find(topCartClickedItem => topCartClickedItem.recipe_id === item.recipe_id)
-    // const alreadyPreparing = preparingItem.find(itemPreparing =>itemPreparing.recipe_id === item.recipe_id )
-    if (!alreadyExist) {
+    const alreadyPreparing = preparingItem.find(itemPreparing =>itemPreparing.recipe_id === item.recipe_id )
+    if (!alreadyExist && !alreadyPreparing) {
       setClickCount(clickCount + 1)
       const newSet = [...clickedItems, item];
       setClickedItems(newSet);
+      toast.success("Item Is Ready For Cooking!")
+    }
+    else if(alreadyPreparing){
+      toast.success(`Item Is Cooking! Wait ${time} Min ! `)
+    }
+    else{
+      toast.warning("Item Is Already Added !")
     }
 
   }
@@ -109,11 +118,8 @@ function App() {
               </div>
             </div>
           </div>
-
         </div>
-
-
-      </div>
+      </div><ToastContainer />
     </>
   )
 }
