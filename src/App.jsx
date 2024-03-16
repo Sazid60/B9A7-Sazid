@@ -75,16 +75,16 @@ function App() {
             <div className="lg:w-[60%] flex flex-col item-center border-2 p-6 rounded-xl">
               <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Want to Cook : {clickCount}</h1>
               <hr className="mb-8" />
-              <table className="table-auto ">
-                <thead>
+              <table className="table-auto">
+                <thead className="border-b-2">
                   <tr className="">
-                    <th className="text-xs lg:text-lg"></th>
+                    <th className=" px-2 text-xs lg:text-lg"></th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Name</th>
                     <th className="px-2 py-2 text-xs lg:text-lg">Time</th>
                     <th className="px-4 py-2 text-xs lg:text-lg">Calories</th>
                     <th className="px-4 py-2 text-xs lg:text-lg"></th>
-                  </tr>
-                </thead>
+                  </tr> 
+                </thead> 
                 {
                   clickedItems.map((clickedItem, index) => <CartTop index={index + 1} key={clickedItem.recipe_id} clickedItem={clickedItem} handlePreparingButton={handlePreparingButton}></CartTop>)
                 }
@@ -93,7 +93,7 @@ function App() {
               <div className="mt-12">
                 <h1 className="font-bold text-xl lg:text-2xl text-center lg:mb-6">Currently Cooking : {preparingCount}</h1> <hr className="mb-8" />
                 <table className="table-auto w-full text-center ">
-                  <thead>
+                  <thead className="">
                     <tr>
                       <th className="text-xs lg:text-lg"></th>
                       <th className="px-4 py-2 text-xs lg:text-lg">Name</th>
@@ -102,7 +102,7 @@ function App() {
                       <th className="px-4 py-2 text-xs lg:text-lg"></th>
                     </tr>
                   </thead>
-                  <tbody className="text-center">
+                  <tbody className="text-center bg-[#28282808] rounded-xl">
                     {
                       preparingItem.map((item,index)=><CartBottom key={index} item={item} index={index+1}></CartBottom>)
                     }
