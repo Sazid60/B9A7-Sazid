@@ -8,8 +8,8 @@ const Banner = () => {
                 <p className="text-white text-center text-xs lg:text-2xl mt-4 lg:mt-7 max-w-[280px] lg:max-w-[850px]">Embark on a personalized culinary journey with our tailored cooking classes. Delve into vibrant flavors</p>
             </div>
             <div className="flex gap-4 justify-center items-center mt-5 lg:mt-10 pb-8 lg:pb-24">
-                <button className="btn bg-green-400 font-bold border-0 rounded-full">Explore Now</button>
-                <button className="btn bg-transparent text-white rounded-full ">Our Feedback</button>
+                <button className="btn bg-green-400 font-bold border-0 rounded-full text-sm lg:text-lg">Explore Now</button>
+                <button className="btn bg-transparent text-white rounded-full text-sm lg:text-lg ">Our Feedback</button>
             </div>
         </div>
     );

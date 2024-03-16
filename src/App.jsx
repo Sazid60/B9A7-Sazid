@@ -40,6 +40,7 @@ function App() {
 
   }
   const handlePreparingButton = (clickedItem) => {
+    toast.success("Cooking Started !")
     const newClicked = [...preparingItem, clickedItem]
     setPreparingItem(newClicked)
     setClickCount(clickCount - 1)
@@ -79,11 +80,11 @@ function App() {
               <table className="table-auto ">
                 <thead>
                   <tr className="">
-                    <th className="text-xs lg:text-xl"></th>
-                    <th className="px-2 py-2 text-xs lg:text-xl">Name</th>
-                    <th className="px-2 py-2 text-xs lg:text-xl">Time</th>
-                    <th className="px-4 py-2 text-xs lg:text-xl">Calories</th>
-                    <th className="px-4 py-2 text-xs lg:text-xl"></th>
+                    <th className="text-xs lg:text-lg"></th>
+                    <th className="px-2 py-2 text-xs lg:text-lg">Name</th>
+                    <th className="px-2 py-2 text-xs lg:text-lg">Time</th>
+                    <th className="px-4 py-2 text-xs lg:text-lg">Calories</th>
+                    <th className="px-4 py-2 text-xs lg:text-lg"></th>
                   </tr>
                 </thead>
                 {
@@ -96,11 +97,11 @@ function App() {
                 <table className="table-auto w-full text-center ">
                   <thead>
                     <tr>
-                      <th className="text-xs lg:text-xl"></th>
-                      <th className="px-4 py-2 text-xs lg:text-xl">Name</th>
-                      <th className="px-4 py-2 text-xs lg:text-xl">Time</th>
-                      <th className="px-4 py-2 text-xs lg:text-xl">Calories</th>
-                      <th className="px-4 py-2 text-xs lg:text-xl"></th>
+                      <th className="text-xs lg:text-lg"></th>
+                      <th className="px-4 py-2 text-xs lg:text-lg">Name</th>
+                      <th className="px-4 py-2 text-xs lg:text-lg">Time</th>
+                      <th className="px-4 py-2 text-xs lg:text-lg">Calories</th>
+                      <th className="px-4 py-2 text-xs lg:text-lg"></th>
                     </tr>
                   </thead>
                   <tbody className="text-center">
@@ -112,8 +113,8 @@ function App() {
                 </table> <hr className="mt-6" />
                 <div className="mt-7 text-center lg:text-right lg:pr-14">
                   <br />
-                  <h1 className="lg:text-xl font-bold"> Total Time: {time} Minutes </h1> <br />
-                  <h1 className="lg:text-xl font-bold"> Total Calories: {calories} Calories</h1>
+                  <h1 className="lg:text-lg font-bold"> Total Time: {time} Minutes </h1> <br />
+                  <h1 className="lg:text-lg font-bold"> Total Calories: {calories} Calories</h1>
                 </div>
               </div>
             </div>
