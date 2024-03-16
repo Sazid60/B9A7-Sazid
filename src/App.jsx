@@ -51,15 +51,13 @@ function App() {
     setCalories(calories +  JSON.parse(clickedItem.calories))
   }
   console.log(time)
-  // console.log(preparingCount)
 
   useEffect(() => {
     fetch('items.json')
       .then(res => res.json())
       .then(data => setItems(data))
   }, [])
-  // console.log(item)
-
+ 
   return (
     <>
       <div className="container mx-auto">
@@ -108,7 +106,6 @@ function App() {
                     {
                       preparingItem.map((item,index)=><CartBottom key={index} item={item} index={index+1}></CartBottom>)
                     }
-                    {/* <CartBottom preparingItem={preparingItem}></CartBottom> */}
                   </tbody>
                 </table> <hr className="mt-6" />
                 <div className="mt-7 text-center lg:text-right lg:pr-14">
