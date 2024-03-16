@@ -28,7 +28,7 @@ const Recipe = ({item,handleCookClick}) => {
                         </div>
                     </div>
                     <div className="card-actions justify-start">
-                        <button onClick={()=>handleCookClick(item)} className="btn bg-green-400 text-sm lg:text-lg rounded-full text-white shadow-xl">Want to Cook</button>
+                        <button onClick={()=>handleCookClick(item)} className="btn bg-green-400 text-xs lg:text-sm rounded-full text-white shadow-xl">Want to Cook</button>
                     </div>
                 </div>
             </div>
